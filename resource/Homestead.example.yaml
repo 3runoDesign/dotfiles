@@ -1,5 +1,8 @@
 # ...
 variables:
+    - key: DB_HOST
+      value: localhost
+
     - key: DB_USERNAME
       value: homestead
 
