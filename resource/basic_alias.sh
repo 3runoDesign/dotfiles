@@ -34,3 +34,6 @@ alias vssh='current_path=$(pwd) && $PATH_HOMESTEAD && vagrant ssh && cd $current
 alias vup='current_path=$(pwd) && $PATH_HOMESTEAD && vagrant up && cd $current_path' # Alias to Vagrant up
 alias vrl='current_path=$(pwd) && $PATH_HOMESTEAD && vagrant reload --provision && cd $current_path' # Alias to Vagrant reload
 alias vhalt='current_path=$(pwd) && $PATH_HOMESTEAD && vagrant halt && cd $current_path' # Alias to Vagrant halt
+
+# Create Project BedRock
+alias sitewp='f() { composer create-project roots/bedrock $1 && cd $1/ && rm -rf .env && wp dotenv init --template=.env.example --interactive --with-salts && vrl };f'
