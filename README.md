@@ -1,11 +1,11 @@
 # My Environment
-Some basic settings for my work environment.
+A handful of code helpers and settings for my workflow.
 
-- Use [Atom](https://github.com/3runoDesign/my-Atom)
-- Use [Basic alias](https://github.com/3runoDesign/my-Environment/resource/basic_alias.sh)
-- Use [Homestead.yaml](https://github.com/3runoDesign/my-Environment/blob/master/resource/Homestead.example.yaml)
-- Use [Laravel/Homestead](https://laravel.com/docs/master/homestead)
-- Use [Thoughtbot Laptop](https://github.com/thoughtbot/laptop)
-- Use [WP-Cli](http://wp-cli.org/)
-- Use [WP-cli-dotenv-command](https://github.com/aaemnnosttv/wp-cli-dotenv-command)
-- Use [Bedrock](https://github.com/roots/bedrock)
+## Setup
+1. Update macOS to the latest version through the App Store
+1. Install [Laptop](https://github.com/thoughtbot/laptop)
+1. Run the installer script `./install.sh`
+
+## TODO
+- [ ] Melhorar o `./install.sh`
+- [ ] Melhorar o `./aliases.sh`
