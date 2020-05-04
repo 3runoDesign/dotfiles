@@ -40,6 +40,8 @@ homebrew_cask_packages(
   "iterm2", # Terminal
   "font-fira-code", # Fonte
   "postman", # Workflows para APIs
+  "deezer", # Install player
+  "opera", # Install browser
 )
 
 for homebrew_cask_package in "${homebrew_cask_packages[@]}"; do
