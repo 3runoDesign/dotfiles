@@ -1,3 +1,3 @@
+alias cls="clear"
 alias zreload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
-
-# TODO RAW2JPG
+alias raw2jpg="time_stamp=$(date +%Y-%m-%d-%T) && folder_name="JPEG_RAW_2_JPG/${time_stamp}" && mkdir -p "${folder_name}" && for i in *.CR2; do sips -s format jpeg $i --out "${folder_name}/${i%.*}.jpg"; done"
