@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
-echo "Setting up my Environment..."
+echo "🚀 Setting up my Environment..."
 sudo -v
 
 # Update Homebrew
@@ -13,6 +13,14 @@ if test ! $(which zsh); then
   brew install zsh
   chsh -s /usr/local/bin/zsh
 
+  echo "✅ Installed Zsh"
+fi
+
+# Install .Oh-My-ZSH
+if [ -d "$HOME/.oh-my-zsh" ] 
+then
+    echo "Directory $HOME/.oh-my-zsh exists." 
+else
   # Oh My Zsh
   echo "Installing Oh My Zsh"
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -20,10 +28,8 @@ if test ! $(which zsh); then
   echo "Installing Theme Zsh"
   git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
   ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
-else
-  echo "✅ Zsh Install"
 fi
-
+echo "✅ Installed .Oh-My-ZSH"
 
 # Install Homebrew cask packages
 echo "Installing Homebrew cask packages"
