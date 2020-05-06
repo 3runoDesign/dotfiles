@@ -45,12 +45,13 @@ homebrew_cask_packages(
 for homebrew_cask_package in "${homebrew_cask_packages[@]}"; do
 	brew cask install "$homebrew_cask_package"
 done
+echo "✅ Installed packages"
 
-# Install java
-echo "Installing java"
+# Copy ./.zshrc and aliases.zsh
+cp -R $(pwd)/.zshrc "$HOME/.zshrc"
+cp -R $(pwd)/aliases.zsh "$HOME/.oh-my-zsh/custom/aliases.zsh"
 
-# Install Composer
-echo "Installing Composer"
+echo "✅ Copy files"
 
 # Complete
-echo "Installation Complete"
+echo "Installation Complete 😎"
