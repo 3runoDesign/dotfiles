@@ -36,18 +36,18 @@ echo "Installing Homebrew cask packages"
 brew tap homebrew/cask-fonts
 
 homebrew_cask_packages(
-  "lastpass", # Gerenciador de senhas
-  "docker", # Software contêiner
-  "sequel-pro", # IDE para DB
-  "visual-studio-code", # Editor
-  "vlc", # Media player
-  "rocket", # Gerenciado de emojis
-  "deezer", # Player de música
-  "iterm2", # Terminal
-  "font-fira-code", # Fonte
-  "postman", # Workflows para APIs
-  "deezer", # Install player
-  "opera", # Install browser
+  "lastpass",
+  "docker",
+  "sequel-pro",
+  "visual-studio-code",
+  "vlc",
+  "deezer",
+  "iterm2",
+  "font-fira-code",
+  "postman",
+  "deezer",
+  "opera",
+  "spectacle"
 )
 
 for homebrew_cask_package in "${homebrew_cask_packages[@]}"; do
@@ -58,8 +58,11 @@ echo "✅ Installed packages"
 # Copy ./.zshrc and aliases.zsh
 cp -R $(pwd)/.zshrc "$HOME/.zshrc"
 cp -R $(pwd)/aliases.zsh "$HOME/.oh-my-zsh/custom/aliases.zsh"
-
 echo "✅ Copy files"
+
+echo "Start :: Download Dark Theme :: iTerm2"
+wget -cO - ~/Downloads https://github.com/dracula/iterm/archive/master.zip > Dracula-Theme-iterm2.zip
+echo "Finish :: Download Dark Theme :: iTerm2"
 
 # Complete
 echo "Installation Complete 😎"
