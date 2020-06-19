@@ -1,0 +1,7 @@
+[push]
+	followTags = true
+[core]
+	editor = code --wait
+[alias]
+	l= !git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %C(bold blue)<%an> %Cgreen(%cr)%Creset'
+	amend = !git add --all && git commit -v --no-edit --amend
